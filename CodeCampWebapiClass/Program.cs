@@ -31,6 +31,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+
+builder.Services.AddStackExchangeRedisCache(options =>
+    {
+        options.Configuration = "localhost"; // Redis server host
+        options.InstanceName = "SampleInstance"; // Unique instance name
+    });
+
+
 //builder.Services.AddCors();
 
 // builder.Services.AddCors(options =>
