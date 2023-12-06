@@ -9,6 +9,7 @@ namespace CodeCampWebapiClass.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+//[Authorize] // jwt-todo: 5  [AllowAnonymous]
 public class BetterCodeCampController : ControllerBase
 {
     private readonly ILogger<BetterCodeCampController> _logger;
@@ -24,6 +25,7 @@ public class BetterCodeCampController : ControllerBase
         //_codeCampService = codeCampService;
         _iCodeCampStudentService = iCodeCampStudentService;
     }
+
 
     [HttpGet]
     public ActionResult<IEnumerable<CodeCamperModel>> Get()
