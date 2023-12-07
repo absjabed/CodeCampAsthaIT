@@ -1,0 +1,29 @@
+dotnet tool install --global dotnet-ef
+dotnet ef
+dotnet ef migrations list --project codecamp_efcore.csproj
+
+//Two commands are enough
+1. dotnet ef migrations add InitialCreate
+2. dotnet ef database update
+3. dotnet ef migrations list --project codecamp_efcore.csproj
+
+dotnet ef migrations script --idempotent
+
+dotnet ef migrations script --idempotent > db-migration-script.sql
+
+
+references:
+{
+    "title": "Mr",
+    "firstName": "George",
+    "lastName": "Costanza",
+    "role": "User",
+    "email": "george@costanza.com",
+    "password": "george-likes-spicy-chicken",
+    "confirmPassword": "george-likes-spicy-chicken"
+}
+
+{
+    "firstName": "Art",
+    "lastName": "Vandelay"
+}

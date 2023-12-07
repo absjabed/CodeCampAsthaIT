@@ -1,0 +1,11 @@
+Scaffold-DbContext "Data Source=DESKTOP-H20O12E;Initial Catalog=Northwind;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+ActionScript
+
+
+dotnet ef dbcontext scaffold "<your existing db connection string>" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+"Data Source=localhost; Initial Catalog=CodecampDb; User ID=sa; Password=8YZcZ8UrJRmER5aG; MultipleActiveResultSets=true;"
+
+
+1.
+dotnet ef dbcontext scaffold "Data Source=localhost; Initial Catalog=CodecampDb; User ID=sa; Password=8YZcZ8UrJRmER5aG; MultipleActiveResultSets=true;" Microsoft.EntityFrameworkCore.SqlServer -o Entities
